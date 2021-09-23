@@ -43,12 +43,4 @@ pac_recordsDF.show()
 pac_to_pacsDF.show()
 
 
-print("Inner Join")
-bjoincDF = backersDF.join(candidatesDF,["cid"],how="inner")
-bjoincDF.printSchema()
 
-print("Inner Join with Select")
-bjoincDF = backersDF.join(candidatesDF,["cid"],how="inner").select("name","cycle_candidate","first_last_party")
-bjoincDF.printSchema()
-
-bjoincDF.show()
